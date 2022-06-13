@@ -114,15 +114,6 @@ with st.echo(code_location='below'):
         res = image_editable.text((15, 15), title_text, size = 10, fill = (255, 0, 0))
         st.image(img)
 
-#        @bot.message_handler(commands=["start"])
-        def start(m, res=False):
-            bot.send_message(m.chat.id, 'Напиши мне название города и я скину тебе "его" фото')
-
-#        @bot.message_handler(content_types=["text"])
-        def handle_text(message):
-            bot.send_photo(message.chat.id, returnphoto(message, photos))
-
-#        bot.polling(none_stop=True, interval=0)
 
         st.write('Помогу загрейдить эту работу: ')
         st.write('**Обработка данных с помощью pandas. 1-2** '
