@@ -13,10 +13,6 @@ import bs4
 from bs4 import BeautifulSoup as bs
 from PIL import Image, ImageFont, ImageDraw
 import urllib.request
-#import telebot
-
-
-#bot = telebot.Telebot(API_KEY)
 
 with st.echo(code_location='below'):
 
