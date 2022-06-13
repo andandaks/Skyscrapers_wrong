@@ -15,9 +15,8 @@ from PIL import Image, ImageFont, ImageDraw
 import urllib.request
 #import telebot
 
-import settings
 
-#bot = telebot.Telebot(settings.API_KEY)
+#bot = telebot.Telebot(API_KEY)
 
 with st.echo(code_location='below'):
 
