@@ -47,7 +47,7 @@ with st.echo(code_location='below'):
                  'Именно это здание считается первым небоскрёбом, потому что при его строительстве впервые использовался несущий каркас –– '
                  'конструкция опиралась на железо-бетонные сваи и стальной каркас, а не на стены.')
         st.image('https://upload.wikimedia.org/wikipedia/commons/3/38/Home_Insurance_Building.JPG', use_column_width = True, caption = 'Хоум-Иншуренс-билдинг, Чикаго. Взято из википедии')
-        df = pd.read_csv('/Users/andaks/Downloads/List of cities with the most skyscrapers.csv', sep=';', encoding = 'unicode_escape')
+        df = pd.read_csv('List of cities with the most skyscrapers.csv', sep=';', encoding = 'unicode_escape')
         groupedcountries = df.groupby('Country')['Number of skyscrapers'].sum().to_frame()
         groupedcountries['name'] = groupedcountries.index
         groupedcountries = groupedcountries.reset_index(drop = True)
@@ -61,7 +61,7 @@ with st.echo(code_location='below'):
                  'На карте изображено распределение небоскрёбов по разным странам мира. '
                  'На сегодня больше всего небоскрёбов построено в Китае.')
         st.pyplot(mergedcountries.plot(column='Number of skyscrapers', ax=ax, legend=True, norm=matplotlib.colors.LogNorm(vmin=1, vmax=3000),).figure)
-        gdps = pd.read_csv('/Users/andaks/Downloads/gdp world bank info.csv', index_col = False, sep= ";")
+        gdps = pd.read_csv('gdp world bank info.csv', index_col = False, sep= ";")
         gdps.rename(columns = {'Country Name': 'name'}, inplace = True)
         gdps = gdps[['name', '2020']].dropna()
         gdps['name'] = gdps['name'].replace({'United States': 'United States of America'})
